@@ -14,3 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+$('.menu-bar').on('click', function(){
+	$('nav ul').toggleClass('reveal');
+});

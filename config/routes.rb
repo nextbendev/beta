@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
 
-  root "home#index"
+  get 'pages/home'
+
+
+
+  get 'pages/guide'
+  get 'pages/contact'
+  get 'pages/login'
+  get 'pages/travel'
+  get 'pages/food'
+  get 'pages/nightlife'
+  get 'pages/cooking'
   get 'sessions/new'
   get 'users/new'
   get 'home/index'
@@ -12,16 +22,20 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  resources :users
+
+
+  resources :users, :pages, :comments
 
   resources :articles do
-    resources :comments
+
+
+
   end
 
 
 
 
-
+root to: 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

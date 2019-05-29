@@ -1,30 +1,13 @@
 
-<div id="container" class="flexChild columnParent">
-
-  <div id="columnChild62561" class="flexChild columnParent">
-    <div id="columnChild18944" class="flexChild">
-      <%= link_to 'My Blog', controller: 'articles' %>
-    </div>
-
-    <div id="columnChild62202" class="flexChild columnParent">
-      <div id="columnChild94014" class="flexChild rowParent">
-        <div id="rowChild72299" class="flexChild selected">
-          <%= link_to 'New article', new_article_path %>
-
-        </div>
-
-        <div id="rowChild58269" class="flexChild">
-          <h1>Hello, peeps!</h1>
-        </div>
-  </div>
+<%= link_to 'About', pages_path %>
 
 
-  </div>
-</div>
+<div class="container">
+  <ul class="nav nan-tabs">
+    <%= link_to 'Home', 'home#index' %>
+    <%= link_to "Guide", 'pages/guide' %>
+    <%= link_to "Contact",  'pages/contact' %>
+    <%= link_to "Login/Sign Up", 'users/new' %>
+  </ul>
 
-  <div id="columnChild22424" class="flexChild columnParent">
-
-
-    <div id="columnChild35313" class="flexChild"></div>
-</div>
 </div>
